@@ -1,14 +1,10 @@
 # Compiler and flags
 CXX       := g++
-CXXFLAGS  := -I src/include/SDL2 -g
+CXXFLAGS  := -std=c++23 -I src/include/SDL2 -g
 LDFLAGS   := -L src/lib -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
 
-# Collect all .cpp files (update path if necessary)
-# SRCS      := $(wildcard *.cpp)
-SRCS 		:= background.cpp
-# If your source files are in a subdirectory (e.g., src/), use:
-# SRCS := $(wildcard src/*.cpp)
-
+# Collect source files
+SRCS      := $(wildcard *.cpp)
 # Convert source files to object files
 OBJS      := $(SRCS:.cpp=.o)
 
