@@ -4,28 +4,24 @@
 #include <SDL.h>
 #include <stdbool.h>
 
-// Gold types
-typedef enum {
-    GOLD_SMALL,
-    GOLD_MEDIUM,
-    GOLD_BIG,
-    GOLD_MYSTERY
-} GoldType;
+// Define the number of objects
+#define NUM_GOLDS 11
+#define NUM_ROCKS 4
 
-// Rock types
-typedef enum {
-    ROCK_SMALL,
-    ROCK_BIG
-} RockType;
+// Define gold types.
+typedef enum { GOLD_SMALL, GOLD_MEDIUM, GOLD_BIG, GOLD_MYSTERY } GoldType;
 
-// Structure for a Gold Object
+// Define rock types.
+typedef enum { ROCK_SMALL, ROCK_BIG } RockType;
+
+// Structure for a gold object.
 typedef struct {
     SDL_Rect rect;
     GoldType type;
     bool active;
 } GoldObject;
 
-// Structure for a Rock Object
+// Structure for a rock object.
 typedef struct {
     SDL_Rect rect;
     RockType type;
